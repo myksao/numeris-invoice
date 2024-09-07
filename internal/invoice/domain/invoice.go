@@ -70,7 +70,7 @@ type InvoiceReq struct {
 	BankAccountID string          `json:"bank_account_id" binding:"required" validate:"required"`
 	Status        string          `json:"status" binding:"required,oneof= draft active pending" validate:"required"`
 	CreatedBy     string          `json:"created_by" binding:"required" validate:"required"`
-	Boq           []InvoiceBoqReq `json:"boq" binding:"required" validate:"required"`
+	Boq           []InvoiceBoqReq `json:"boq" binding:"omitempty" validate:"omitempty"`
 }
 
 type InvoiceBoqReq struct {
