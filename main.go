@@ -168,6 +168,6 @@ func main() {
 	if PORT == "" {
 		PORT = "8081"
 	}
-	router.Run(":" + PORT)
 	fmt.Println("Application Server Running on: ", PORT)
+	router.Run(":" + PORT)
 }
